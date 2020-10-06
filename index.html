@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Edison Li - Final - Web 1.0</title>
+    </head>
+    <body>
+        <main>
+            <div>
+                <section id="student-info">
+                    <h1>Edison Li</h1>
+                    <p>My favorite color is black and i wear Nikes</p>
+                </section>
+    
+                <!-- Input options for styling the display -->
+                <section id="data-input">
+                    <h1>Font Styler</h1>
+                    <form action="/action_page.php" method="get">
+                        <label>Font Size</label>
+                        <input id="input-size" type="number">
+                        <label>Font Family</label>
+                        <select id="select-font">
+                            <option>Helvetic</option>
+                            <option>Arial</option>
+                            <option>Times New Roman</option>
+                            <option>Georgia</option>
+                        </select>
+                        <label>Font Color</label>
+                        <input id="input-color" type="color" value="#000">
+                        <label>Background Color</label>
+                        <input id="input-bg-color" type="color" value="#fff">
+                        <label>Enter Text</label>
+                        <textarea id="enter-text"></textarea>
+                    </form>
+                </section>
+            </div>
+
+            <div>
+                <section id="headline-display">
+                    <h1 id="display">SAMPLE TEXT</h1>
+                </section>
+                
+                <section id="data-output">
+                    <pre><code>.headline {
+                        font-size: <span id="show-size">16</span>px;
+                        font-family: <span id="show-font">Times</span>;
+                        color: <span id="show-color">#000</span>;
+                        background-color: <span id="show-bg-color">#fff</span>;
+                    }</code></pre>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>
