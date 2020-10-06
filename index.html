@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0;">
         <title>Edison Li - Final - Web 1.0</title>
     </head>
     <body>
@@ -11,11 +12,11 @@
                     <h1>Edison Li</h1>
                     <p>My favorite color is black and i wear Nikes</p>
                 </section>
-    
+                
                 <!-- Input options for styling the display -->
                 <section id="data-input">
                     <h1>Font Styler</h1>
-                    <form action="/action_page.php" method="get">
+                    <form id="input-form">
                         <label>Font Size</label>
                         <input id="input-size" type="number">
                         <label>Font Family</label>
@@ -39,7 +40,7 @@
                 <section id="headline-display">
                     <h1 id="display">SAMPLE TEXT</h1>
                 </section>
-                
+
                 <section id="data-output">
                     <pre><code>.headline {
                         font-size: <span id="show-size">16</span>px;
@@ -50,5 +51,6 @@
                 </section>
             </div>
         </main>
+        <script src="script.js"></script>
     </body>
 </html>
