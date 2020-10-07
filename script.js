@@ -3,41 +3,43 @@ const display = document.querySelector('#display')
 
 // The input field for size
 const inputSize = document.querySelector('#input-size')
-// The element that displays the value 
-const showSize = document.querySelector('#show-size')
-
 // The select field for font family
 const selectFont = document.querySelector('#select-font')
-// The element that displays the value 
-const showFont = document.querySelector('#show-font')
-
 // The input field for input color
 const inputColor = document.querySelector('#input-color')
-// The element that displays the value 
-const showColor = document.querySelector('#show-color')
-
 // The input field for input background color
 const inputBgColor = document.querySelector('#input-bg-color')
-// The element that displays the value 
-const showBgColor = document.querySelector('#show-bg-color')
-
 // The textarea field for enter text
 const enterText = document.querySelector('#enter-text')
 
 
+// The element that displays the value 
+const showSize = document.querySelector('#show-size')
+// The element that displays the value 
+const showFont = document.querySelector('#show-font')
+// The element that displays the value 
+const showColor = document.querySelector('#show-color')
+// The element that displays the value 
+const showBgColor = document.querySelector('#show-bg-color')
 
-inputSize.addEventListener('input', handleInput)
 
-function handleInput() {
+// Event Listeners
+inputSize.addEventListener('input', handleInputSize)
+selectFont.addEventListener('input', handleInputFont)
+inputColor.addEventListener('input', handleInputColor)
+inputBgColor.addEventListener('input', handleInputBgColor)
+enterText.addEventListener('input', handleInputText)
+
+
+// Event Handlers
+function handleInputSize() {
 	// get the font size:
-	const fontSize = inputSize.value
-	// Set the style 
+	const fontSize = inputSize.value + 'px'
+	// Set the style  
 	display.style.fontSize = fontSize
 	// Show the size
 	showSize.innerHTML = fontSize
 }
-
-selectFont.addEventListener('select', handleInputFont)
 
 function handleInputFont() {
 	// get the font family:
@@ -48,9 +50,6 @@ function handleInputFont() {
 	showFont.innerHTML = fontFamily
 }
 
-
-inputColor.addEventListener('input', handleInputColor)
-
 function handleInputColor() {
 	// get the font color:
 	const fontColor = inputColor.value
@@ -59,9 +58,6 @@ function handleInputColor() {
 	// Show the font color
 	showColor.innerHTML = fontColor
 }
-
-
-inputBgColor.addEventListener('input', handleInputBgColor)
 
 function handleInputBgColor() {
 	// get the background color:
@@ -72,14 +68,11 @@ function handleInputBgColor() {
 	showBgColor.innerHTML = bgColor
 }
 
-
-enterText.addEventListener('textarea', handleInputText)
-
 function handleInputText() {
 	// get the font size:
-	const textArea = enterText.value
+	const text = enterText.value
 	// Set the style 
-	display.innerHTML = textArea
+	display.innerHTML = text
 }
 
 
